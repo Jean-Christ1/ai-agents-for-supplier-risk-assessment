@@ -1,0 +1,76 @@
+# Allowlist of official domains for web scraping
+# Author: Armand Amoussou
+# Only these domains are permitted for data collection.
+# Each entry: domain + description + rate limit (requests/minute).
+
+domains:
+  # France - Official registries
+  - domain: "www.societe.com"
+    description: "French company registry (public info)"
+    rate_limit_rpm: 10
+  - domain: "www.infogreffe.fr"
+    description: "French commercial court registry"
+    rate_limit_rpm: 6
+  - domain: "www.bodacc.fr"
+    description: "Official bulletin of civil and commercial announcements"
+    rate_limit_rpm: 10
+  - domain: "annuaire-entreprises.data.gouv.fr"
+    description: "French open data enterprise directory"
+    rate_limit_rpm: 20
+
+  # Europe - Official registries
+  - domain: "www.northdata.com"
+    description: "European company data aggregator (public)"
+    rate_limit_rpm: 6
+  - domain: "e-justice.europa.eu"
+    description: "European e-Justice Portal - Business Registers"
+    rate_limit_rpm: 6
+
+  # International - Sanctions and compliance
+  - domain: "sanctionssearch.ofac.treas.gov"
+    description: "US OFAC Sanctions List"
+    rate_limit_rpm: 10
+  - domain: "www.sanctionsmap.eu"
+    description: "EU Sanctions Map"
+    rate_limit_rpm: 10
+
+  # Financial / ratings (public pages only)
+  - domain: "www.banque-france.fr"
+    description: "Banque de France public publications"
+    rate_limit_rpm: 6
+  - domain: "www.ecb.europa.eu"
+    description: "European Central Bank publications"
+    rate_limit_rpm: 6
+
+  # News - Official sources
+  - domain: "www.lesechos.fr"
+    description: "Les Echos - French business news"
+    rate_limit_rpm: 4
+  - domain: "www.reuters.com"
+    description: "Reuters news agency"
+    rate_limit_rpm: 4
+  - domain: "www.ft.com"
+    description: "Financial Times"
+    rate_limit_rpm: 4
+
+  # Golden / local test data (always allowed)
+  - domain: "localhost"
+    description: "Local golden test data server"
+    rate_limit_rpm: 1000
+  - domain: "127.0.0.1"
+    description: "Local golden test data"
+    rate_limit_rpm: 1000
+
+# Default rate limit for any domain not explicitly listed
+default_rate_limit_rpm: 4
+
+# User-Agent string for HTTP requests
+user_agent: "SupplierRiskBot/1.0 (+https://github.com/armand-amoussou/supplier-risk-assessment; responsible-scraping)"
+
+# Global settings
+settings:
+  respect_robots_txt: true
+  max_retries: 3
+  backoff_factor: 2.0
+  request_timeout_seconds: 30
+  cache_ttl_hours: 24

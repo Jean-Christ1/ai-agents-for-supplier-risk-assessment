@@ -1,0 +1,284 @@
+# Seed data: Fictional suppliers for MVP testing
+# Author: Armand Amoussou
+# 20 tier-1 suppliers in the industrial/construction equipment sector
+
+suppliers:
+  - supplier_id: "SUP-001"
+    name: "AcierPlus SAS"
+    country: "FR"
+    tier: 1
+    category: "steel_components"
+    internal_signals:
+      delivery_delays_last_12m: 3
+      quality_incidents_last_12m: 1
+      avg_delay_days: 2.5
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 8
+      litigation_count: 0
+
+  - supplier_id: "SUP-002"
+    name: "MetalWerk GmbH"
+    country: "DE"
+    tier: 1
+    category: "steel_components"
+    internal_signals:
+      delivery_delays_last_12m: 0
+      quality_incidents_last_12m: 0
+      avg_delay_days: 0.0
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 12
+      litigation_count: 0
+
+  - supplier_id: "SUP-003"
+    name: "RoueExpress SARL"
+    country: "FR"
+    tier: 1
+    category: "wheels_tires"
+    internal_signals:
+      delivery_delays_last_12m: 8
+      quality_incidents_last_12m: 4
+      avg_delay_days: 7.2
+      is_monosource: true
+      criticality: "CRITICAL"
+      contract_years: 3
+      litigation_count: 1
+
+  - supplier_id: "SUP-004"
+    name: "HydraForce Ltd"
+    country: "GB"
+    tier: 1
+    category: "hydraulic_systems"
+    internal_signals:
+      delivery_delays_last_12m: 2
+      quality_incidents_last_12m: 0
+      avg_delay_days: 1.0
+      is_monosource: false
+      criticality: "HIGH"
+      contract_years: 6
+      litigation_count: 0
+
+  - supplier_id: "SUP-005"
+    name: "ElektronikParts AG"
+    country: "DE"
+    tier: 1
+    category: "electronics"
+    internal_signals:
+      delivery_delays_last_12m: 12
+      quality_incidents_last_12m: 6
+      avg_delay_days: 10.5
+      is_monosource: true
+      criticality: "CRITICAL"
+      contract_years: 2
+      litigation_count: 2
+
+  - supplier_id: "SUP-006"
+    name: "CaoutchoucPro SA"
+    country: "FR"
+    tier: 1
+    category: "rubber_seals"
+    internal_signals:
+      delivery_delays_last_12m: 1
+      quality_incidents_last_12m: 0
+      avg_delay_days: 0.5
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 15
+      litigation_count: 0
+
+  - supplier_id: "SUP-007"
+    name: "PrecisionCast SpA"
+    country: "IT"
+    tier: 1
+    category: "cast_parts"
+    internal_signals:
+      delivery_delays_last_12m: 5
+      quality_incidents_last_12m: 2
+      avg_delay_days: 4.0
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 7
+      litigation_count: 0
+
+  - supplier_id: "SUP-008"
+    name: "SteelDragon Co."
+    country: "CN"
+    tier: 1
+    category: "steel_components"
+    internal_signals:
+      delivery_delays_last_12m: 6
+      quality_incidents_last_12m: 3
+      avg_delay_days: 8.0
+      is_monosource: false
+      criticality: "HIGH"
+      contract_years: 4
+      litigation_count: 1
+
+  - supplier_id: "SUP-009"
+    name: "NordicBolt AB"
+    country: "SE"
+    tier: 1
+    category: "fasteners"
+    internal_signals:
+      delivery_delays_last_12m: 0
+      quality_incidents_last_12m: 0
+      avg_delay_days: 0.0
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 10
+      litigation_count: 0
+
+  - supplier_id: "SUP-010"
+    name: "MoteurTech SAS"
+    country: "FR"
+    tier: 1
+    category: "engines"
+    internal_signals:
+      delivery_delays_last_12m: 4
+      quality_incidents_last_12m: 1
+      avg_delay_days: 3.0
+      is_monosource: true
+      criticality: "CRITICAL"
+      contract_years: 5
+      litigation_count: 0
+
+  - supplier_id: "SUP-011"
+    name: "CableConnect Oy"
+    country: "FI"
+    tier: 1
+    category: "wiring_harness"
+    internal_signals:
+      delivery_delays_last_12m: 1
+      quality_incidents_last_12m: 1
+      avg_delay_days: 1.5
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 9
+      litigation_count: 0
+
+  - supplier_id: "SUP-012"
+    name: "GlassClear BV"
+    country: "NL"
+    tier: 1
+    category: "cabin_glass"
+    internal_signals:
+      delivery_delays_last_12m: 2
+      quality_incidents_last_12m: 0
+      avg_delay_days: 1.0
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 11
+      litigation_count: 0
+
+  - supplier_id: "SUP-013"
+    name: "PaintMaster Kft"
+    country: "HU"
+    tier: 1
+    category: "coatings"
+    internal_signals:
+      delivery_delays_last_12m: 7
+      quality_incidents_last_12m: 5
+      avg_delay_days: 6.0
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 4
+      litigation_count: 1
+
+  - supplier_id: "SUP-014"
+    name: "SealTech Pty"
+    country: "AU"
+    tier: 1
+    category: "hydraulic_seals"
+    internal_signals:
+      delivery_delays_last_12m: 3
+      quality_incidents_last_12m: 0
+      avg_delay_days: 5.0
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 6
+      litigation_count: 0
+
+  - supplier_id: "SUP-015"
+    name: "TurboValve SA"
+    country: "ES"
+    tier: 1
+    category: "valves"
+    internal_signals:
+      delivery_delays_last_12m: 10
+      quality_incidents_last_12m: 3
+      avg_delay_days: 9.0
+      is_monosource: true
+      criticality: "HIGH"
+      contract_years: 3
+      litigation_count: 2
+
+  - supplier_id: "SUP-016"
+    name: "FrameForge s.r.o."
+    country: "CZ"
+    tier: 1
+    category: "chassis_frames"
+    internal_signals:
+      delivery_delays_last_12m: 1
+      quality_incidents_last_12m: 0
+      avg_delay_days: 0.5
+      is_monosource: false
+      criticality: "HIGH"
+      contract_years: 8
+      litigation_count: 0
+
+  - supplier_id: "SUP-017"
+    name: "BatteryCorp Inc."
+    country: "US"
+    tier: 1
+    category: "batteries"
+    internal_signals:
+      delivery_delays_last_12m: 4
+      quality_incidents_last_12m: 2
+      avg_delay_days: 3.5
+      is_monosource: false
+      criticality: "HIGH"
+      contract_years: 5
+      litigation_count: 0
+
+  - supplier_id: "SUP-018"
+    name: "SinoGear Trading"
+    country: "CN"
+    tier: 1
+    category: "gearboxes"
+    internal_signals:
+      delivery_delays_last_12m: 15
+      quality_incidents_last_12m: 8
+      avg_delay_days: 12.0
+      is_monosource: false
+      criticality: "MEDIUM"
+      contract_years: 2
+      litigation_count: 3
+
+  - supplier_id: "SUP-019"
+    name: "LightAlloy SA"
+    country: "FR"
+    tier: 1
+    category: "aluminum_parts"
+    internal_signals:
+      delivery_delays_last_12m: 2
+      quality_incidents_last_12m: 1
+      avg_delay_days: 2.0
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 7
+      litigation_count: 0
+
+  - supplier_id: "SUP-020"
+    name: "FilterMax Sp.z.o.o."
+    country: "PL"
+    tier: 1
+    category: "filtration"
+    internal_signals:
+      delivery_delays_last_12m: 0
+      quality_incidents_last_12m: 1
+      avg_delay_days: 0.0
+      is_monosource: false
+      criticality: "LOW"
+      contract_years: 13
+      litigation_count: 0

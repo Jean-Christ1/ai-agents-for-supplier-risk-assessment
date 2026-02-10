@@ -1,0 +1,24 @@
+# Scoring weights configuration
+# Author: Armand Amoussou
+# Weights for the 4 risk criteria in global score computation.
+# Sum must equal 1.0.
+
+weights:
+  c1_delivery_performance: 0.20
+  c2_dependency_criticality: 0.15
+  c3_relationship_history: 0.15
+  c4_financial_risk: 0.50
+
+# Sub-weights for internal criteria components
+c1_sub_weights:
+  delay_frequency: 0.40
+  delay_severity: 0.30
+  quality_incidents: 0.30
+
+c2_sub_weights:
+  monosource: 0.50
+  criticality: 0.50
+
+c3_sub_weights:
+  contract_maturity: 0.40
+  litigation_history: 0.60

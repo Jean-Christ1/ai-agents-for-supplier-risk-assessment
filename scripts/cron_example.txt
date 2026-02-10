@@ -1,0 +1,11 @@
+# AI Agents for Supplier Risk Assessment
+# Author: Armand Amoussou
+# Example cron entry for daily batch execution.
+#
+# Edit with: crontab -e
+# Run daily at 06:00 UTC:
+
+0 6 * * * cd /path/to/ai-agents-for-supplier-risk-assessment && /path/to/.venv/bin/python -m app.cli.main run-daily >> /var/log/supplier-risk/daily.log 2>&1
+
+# To use golden mode (offline, for testing):
+# 0 6 * * * cd /path/to/project && GOLDEN_MODE=1 /path/to/.venv/bin/python -m app.cli.main run-daily >> /var/log/supplier-risk/daily.log 2>&1

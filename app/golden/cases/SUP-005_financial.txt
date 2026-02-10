@@ -1,0 +1,21 @@
+Source: Banque de France - Cotation entreprises (equivalent DE)
+Date: 2026-01-12
+
+ElektronikParts AG - Analyse financiere sommaire
+
+Indicateurs cles (exercice 2025):
+- Chiffre d'affaires: 45.2 MEUR (en baisse de 18% vs 2024)
+- Resultat net: -8.7 MEUR (perte nette)
+- Ratio d'endettement: 87%
+- Tresorerie nette: -3.2 MEUR
+- Delai moyen de paiement fournisseurs: 95 jours
+- Delai moyen de paiement clients: 62 jours
+
+Cotation: Cote de credit degradee de B+ a C- en novembre 2025.
+
+Commentaire analyste:
+La situation financiere de ElektronikParts AG s'est considerablement
+deterioree en 2025. La combinaison d'une baisse significative du CA,
+de pertes nettes croissantes et d'un endettement excessif place cette
+entreprise dans une situation de stress financier eleve. Le risque
+de defaut de paiement est substantiel a court terme.

@@ -46,13 +46,8 @@ env/
 .env
 .env.local
 .env.*.local
-*.env
 
-# GCP & Cloud credentials
-*.json
-!package.json
-!package-lock.json
-!tsconfig.json
+# Credentials
 credentials.json
 service-account*.json
 gcp-*.json
@@ -62,16 +57,18 @@ gcp-*.json
 # Logs
 *.log
 logs/
-*.out
 
-# Data files
+# Data files (runtime)
 data/
-*.csv
 *.parquet
 *.pkl
 *.pickle
 datasets/
 raw_data/
+
+# Runtime output
+out/
+cache/
 
 # Model files
 models/
@@ -118,8 +115,7 @@ temp/
 .coverage
 htmlcov/
 .tox/
-.pytest_cache/
 
-# BigQuery & GCP temp files
-bq-results-*.csv
-*.bqstorage
+# DuckDB
+*.duckdb
+*.duckdb.wal

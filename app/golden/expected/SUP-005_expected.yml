@@ -1,0 +1,19 @@
+# Expected golden output for SUP-005 (ElektronikParts AG)
+# Author: Armand Amoussou
+# This supplier has severe financial distress signals.
+
+supplier_id: "SUP-005"
+expected_risk_level: "HIGH"
+expected_score_range:
+  min: 75
+  max: 100
+expected_financial_level: "HIGH"
+expected_confidence_min: 0.6
+expected_drivers_must_include:
+  - "PROCEEDING"
+expected_drivers_may_include:
+  - "DEBT_STRESS"
+  - "LIQUIDITY_RISK"
+  - "RATING_DOWNGRADE"
+expected_evidence_min_count: 2
+expected_data_gaps_empty: true

@@ -1,0 +1,54 @@
+# Risk thresholds and alerting configuration
+# Author: Armand Amoussou
+
+risk_levels:
+  high: 70
+  medium: 55
+  # Below 55 = LOW
+
+alerting:
+  # Trigger alert if risk level transitions from MEDIUM to HIGH
+  trigger_on_level_escalation: true
+  # Trigger alert if global_score increases by this amount over 7 days
+  score_delta_threshold: 15
+  score_delta_window_days: 7
+  # Trigger alert on critical financial drivers
+  critical_drivers:
+    - "DEFAULT"
+    - "INSOLVENCY"
+    - "PROCEEDING"
+    - "BANKRUPTCY"
+    - "LIQUIDATION"
+
+# Financial scorer confidence thresholds
+financial:
+  min_evidence_items: 1
+  indeterminate_confidence_cap: 0.4
+  score_range_min: 0
+  score_range_max: 100
+  base_score: 50
+
+# Internal scoring parameters
+internal:
+  c1:
+    delay_low: 2        # <= 2 delays/year = low risk
+    delay_high: 8        # >= 8 delays/year = high risk
+    severity_low: 2.0    # <= 2 days avg = low risk
+    severity_high: 7.0   # >= 7 days avg = high risk
+    quality_low: 1       # <= 1 incident = low risk
+    quality_high: 5      # >= 5 incidents = high risk
+  c2:
+    monosource_penalty: 50  # additional risk points if monosource
+    criticality_scores:
+      LOW: 10
+      MEDIUM: 30
+      HIGH: 50
+      CRITICAL: 80
+  c3:
+    maturity_low_years: 3    # < 3 years = higher risk
+    maturity_high_years: 10  # >= 10 years = lower risk
+    litigation_scores:
+      0: 0
+      1: 30
+      2: 55
+      3: 75

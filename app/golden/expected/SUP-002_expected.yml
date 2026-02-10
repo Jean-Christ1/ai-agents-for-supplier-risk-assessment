@@ -1,0 +1,15 @@
+# Expected golden output for SUP-002 (MetalWerk GmbH)
+# Author: Armand Amoussou
+# This supplier has stable, positive financial indicators.
+
+supplier_id: "SUP-002"
+expected_risk_level: "LOW"
+expected_score_range:
+  min: 0
+  max: 30
+expected_financial_level: "LOW"
+expected_confidence_min: 0.6
+expected_drivers_must_include:
+  - "STABLE_POSITIVE"
+expected_evidence_min_count: 1
+expected_data_gaps_empty: true

@@ -1,0 +1,38 @@
+# AI Agents for Supplier Risk Assessment
+# Author: Armand Amoussou
+# Docker Compose: PostgreSQL + optional MailHog
+
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: supplier_risk_pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: supplier_risk
+      POSTGRES_USER: riskuser
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-riskpass_local}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../app/configs/init_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U riskuser -d supplier_risk"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: supplier_risk_mailhog
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    profiles:
+      - mailhog
+
+volumes:
+  pgdata:
